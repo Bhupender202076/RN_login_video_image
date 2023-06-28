@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 import CustumInput from "../../components/CustumInput/CustumInput";
 import CustumButton from "../../components/CustumButton/CustumButton";
 import SocialSignInButtons from "../../components/SocialSignInButtons";
+import { useNavigation } from "@react-navigation/native";
 
 const SignUpScreen = () => {
   const [username, setUsername] = useState("");
@@ -10,12 +11,16 @@ const SignUpScreen = () => {
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
+  const navigation = useNavigation();
+
   const onRegisterPressed = () => {
-    console.warn("onRegisterPressed");
+    // console.warn("onRegisterPressed");
+    navigation.navigate("ConfirmEmail");
   };
 
   const onSignInPresses = () => {
-    console.warn("onSignInPressed");
+    // console.warn("onSignInPressed");
+    navigation.navigate("SignIn");
   };
 
   const onTermOfUsePressed = () => {
@@ -52,7 +57,11 @@ const SignUpScreen = () => {
           setvalue={setPasswordRepeat}
           secureTextEntry
         />
-        <CustumButton text="Register" onPress={onRegisterPressed} />
+        <CustumButton
+          text="Register"
+          onPress={onRegisterPressed}
+          bgColor="#3B71F3"
+        />
 
         <Text style={styles.text}>
           By Registering, you confirm that you accept our{" "}
@@ -98,6 +107,8 @@ const styles = StyleSheet.create({
   text: {
     color: "gray",
     marginVertical: 10,
+    marginBottom: 19,
+    height: 300,
   },
 
   link: {

@@ -3,16 +3,21 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 import CustumInput from "../../components/CustumInput/CustumInput";
 import CustumButton from "../../components/CustumButton/CustumButton";
 import SocialSignInButtons from "../../components/SocialSignInButtons";
+import { useNavigation } from "@react-navigation/native";
 
 const ConfirmEmailScreen = () => {
   const [code, setCode] = useState("");
 
+  const navigation = useNavigation();
+
   const onConfirmPressed = () => {
-    console.warn("onConfirmPressed");
+    // console.warn("onConfirmPressed");
+    navigation.navigate("Home");
   };
 
   const onSignInPresses = () => {
-    console.warn("onSignInPressed");
+    // console.warn("onSignInPressed");
+    navigation.navigate("SignIn");
   };
 
   const OnResendPress = () => {
@@ -34,8 +39,9 @@ const ConfirmEmailScreen = () => {
         <CustumButton
           text="Confirm"
           onPress={onConfirmPressed}
-          bgColor="#E7EAF4"
-          fgcolor="#4765A9"
+          bgColor="#3B71F3"
+          // bgColor="#E7EAF4"
+          // fgcolor="#4765A9"
         />
 
         <CustumButton

@@ -3,17 +3,22 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 import CustumInput from "../../components/CustumInput/CustumInput";
 import CustumButton from "../../components/CustumButton/CustumButton";
 import SocialSignInButtons from "../../components/SocialSignInButtons";
+import { useNavigation } from "@react-navigation/native";
 
 const NewPasswordScreen = () => {
   const [code, setCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
+  const navigation = useNavigation();
+
   const onSubmitPressed = () => {
-    console.warn("onSubmitPressed");
+    // console.warn("onSubmitPressed");
+    navigation.navigate("Home");
   };
 
   const onSignInPresses = () => {
-    console.warn("onSignInPressed");
+    // console.warn("onSignInPressed");
+    navigation.navigate("Signin");
   };
 
   return (
@@ -33,8 +38,7 @@ const NewPasswordScreen = () => {
         <CustumButton
           text="Submit "
           onPress={onSubmitPressed}
-          bgColor="#E7EAF4"
-          fgcolor="#4765A9"
+          bgColor="#3B71F3"
         />
 
         <CustumButton

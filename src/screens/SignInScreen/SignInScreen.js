@@ -11,18 +11,25 @@ import Logo from "../../../assets/images/bhupender-logo.jpg";
 import CustumInput from "../../components/CustumInput/CustumInput";
 import CustumButton from "../../components/CustumButton/CustumButton";
 import SocialSignInButtons from "../../components/SocialSignInButtons";
+import { useNavigation } from "@react-navigation/native";
 
 const SignInScreen = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const { height } = useWindowDimensions();
+  const navigation = useNavigation();
 
   const onSignInPressed = () => {
     console.warn("Sign in");
+    //validate user
+
+    navigation.navigate("Home");
   };
 
   const onForgotPasswordPressed = () => {
-    console.warn("onForgotPasswordPressed");
+    // console.warn("onForgotPasswordPressed");
+    navigation.navigate("ForgotPassword");
   };
 
   // const onSignInFacebook = () => {
@@ -35,7 +42,8 @@ const SignInScreen = () => {
   //   console.warn("onSignInApple");
   // };
   const onSignUpPresses = () => {
-    console.warn("onSignUpPressed");
+    // console.warn("onSignUpPressed");
+    navigation.navigate("SignUp");
   };
   return (
     <>

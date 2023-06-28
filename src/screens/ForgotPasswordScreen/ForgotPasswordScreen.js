@@ -3,21 +3,26 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 import CustumInput from "../../components/CustumInput/CustumInput";
 import CustumButton from "../../components/CustumButton/CustumButton";
 import SocialSignInButtons from "../../components/SocialSignInButtons";
+import { useNavigation } from "@react-navigation/native";
 
 const ForgotPasswordScreen = () => {
   const [username, setUsername] = useState("");
 
-  const onConfirmPressed = () => {
-    console.warn("onConfirmPressed");
+  const navigation = useNavigation();
+
+  const onSendPressed = () => {
+    // console.warn("onConfirmPressed");
+    navigation.navigate("NewPassword");
   };
 
   const onSignInPresses = () => {
-    console.warn("onSignInPressed");
+    // console.warn("onSignInPressed");
+    navigation.navigate("Sign");
   };
 
-  const OnResendPress = () => {
-    console.warn("OnResendPress");
-  };
+  // const OnResendPress = () => {
+  //   console.warn("OnResendPress");
+  // };
 
   return (
     <>
@@ -31,12 +36,7 @@ const ForgotPasswordScreen = () => {
           setvalue={setUsername}
         />
 
-        <CustumButton
-          text="Send Code"
-          onPress={OnResendPress}
-          bgColor="#E7EAF4"
-          fgcolor="#4765A9"
-        />
+        <CustumButton text="Send " onPress={onSendPressed} bgColor="#3B71F3" />
 
         <CustumButton
           text=" Back to Sign in"
