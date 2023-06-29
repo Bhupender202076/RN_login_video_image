@@ -107,8 +107,8 @@ const styles = StyleSheet.create({
   text: {
     color: "gray",
     marginVertical: 10,
-    marginBottom: 19,
-    height: 300,
+
+    height: 200,
   },
 
   link: {

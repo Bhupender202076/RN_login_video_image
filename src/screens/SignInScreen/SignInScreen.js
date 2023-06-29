@@ -63,7 +63,7 @@ const SignInScreen = () => {
           placeholder="Password"
           value={password}
           setvalue={setPassword}
-          secureTextEntry
+          secureTextEntry={true}
         />
         <CustumButton
           text="Sign In"
@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
     width: "70%",
     maxWidth: 300,
     height: 200,
+    marginBottom: 90,
   },
 });
 export default SignInScreen;
