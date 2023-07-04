@@ -18,14 +18,18 @@ const ImageGallery = () => {
   ];
 
   return (
-    <ScrollView>
+    <>
       <Text style={style.root}>Image Gallery </Text>
-      <View>
-        {Data.map((item) => (
-          <Images description={item.description} ImageURL={item.ImageURL} />
-        ))}
-      </View>
-    </ScrollView>
+      <ScrollView>
+        <View>
+          <View>
+            {Data.map((item) => (
+              <Images description={item.description} ImageURL={item.ImageURL} />
+            ))}
+          </View>
+        </View>
+      </ScrollView>
+    </>
   );
 };
 

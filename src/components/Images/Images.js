@@ -13,7 +13,7 @@ const Images = ({ ImageURL, description }) => {
   const navigation = useNavigation();
 
   const navigateImageScreen = () => {
-    navigation.navigate("ImageScreen");
+    navigation.navigate("ImageScreen", { ImageURL });
   };
   return (
     <TouchableOpacity onPress={navigateImageScreen}>
@@ -35,6 +35,7 @@ const Images = ({ ImageURL, description }) => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 25,
+    // backgroundColor: "green",
 
     justifyContent: "flex-start",
     alignItems: "center",

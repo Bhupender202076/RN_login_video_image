@@ -7,11 +7,17 @@ import {
   StatusBar,
 } from "react-native";
 
-const ImageScreen = () => {
+const ImageScreen = ({ route }) => {
+  // console.log("routesparams>>>>>>>>>", route.params);
+  const { ImageURL } = route.params;
+  console.log("routesparams>>>>>>>>>", ImageURL);
+
   return (
     <View style={styles.container}>
+      <Text>yoyoyoyoyo</Text>
       <ImageBackground
-        source={{ ImageURL: "https://picsum.photos/200/300" }}
+        source={{ uri: ImageURL }}
+        resizeMode="cover"
         style={styles.ImageBackground}
       >
         <StatusBar style="auto" />
@@ -30,7 +36,7 @@ const styles = StyleSheet.create({
   ImageBackground: {
     flex: 1,
     resizeMode: "cover",
-    width: "100%",
+    width: "50%",
     alignItems: "center",
   },
 });
