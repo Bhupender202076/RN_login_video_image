@@ -13,7 +13,7 @@ const NewPasswordScreen = () => {
 
   const onSubmitPressed = () => {
     // console.warn("onSubmitPressed");
-    navigation.navigate("Home");
+    navigation.navigate("HomeScreen");
   };
 
   const onSignInPresses = () => {

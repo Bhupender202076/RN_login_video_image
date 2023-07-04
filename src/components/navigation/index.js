@@ -9,6 +9,10 @@ import ConfirmEmailScreen from "../../screens/ConfirmEmailScreen";
 import ForgotPasswordScreen from "../../screens/ForgotPasswordScreen";
 import NewPasswordScreen from "../../screens/NewPasswordScreen";
 import HomeScreen from "../../screens/HomeScreen";
+import ImageGallery from "../../screens/ImageGallery/ImageGallery";
+import WatchVideos from "../../screens/WatchVideos/WatchVideos";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import ImageScreen from "../Videos/ImageScreen/ImageScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +26,10 @@ const Navigation = () => {
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
         <Stack.Screen name="NewPassword" component={NewPasswordScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="ExploreImages" component={ImageGallery} />
+        <Stack.Screen name="WatchVideos" component={WatchVideos} />
+        <Stack.Screen name="VideoPlayer" component={VideoPlayer} />
+        <Stack.Screen name="ImageScreen" component={ImageScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

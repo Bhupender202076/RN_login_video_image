@@ -12,7 +12,7 @@ const ConfirmEmailScreen = () => {
 
   const onConfirmPressed = () => {
     // console.warn("onConfirmPressed");
-    navigation.navigate("Home");
+    navigation.navigate("HomeScreen");
   };
 
   const onSignInPresses = () => {
