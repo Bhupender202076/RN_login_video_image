@@ -6,6 +6,7 @@ import {
   StyleSheet,
   useWindowDimensions,
   ScrollView,
+  Alert,
 } from "react-native";
 import Logo from "../../../assets/images/bhupender-logo.jpg";
 import CustumInput from "../../components/CustumInput/CustumInput";
@@ -16,6 +17,18 @@ import { useNavigation } from "@react-navigation/native";
 const SignInScreen = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const [agree, SetAgree] = useState("false");
+  console.log(username, password);
+
+  // const onSignInPressed = () => {
+  //   if (username === "Mohit" && password === "12345") {
+  //     Alert.alert(`Thank You ${username}`);
+  //     navigation.navigate("HomeScreen");
+  //   } else {
+  //     Alert.alert(`username and Password is not correct`);
+  //   }
+  // };
 
   const { height } = useWindowDimensions();
   const navigation = useNavigation();
