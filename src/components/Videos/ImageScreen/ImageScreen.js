@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  ImageBackground,
-  StatusBar,
-} from "react-native";
+import { Text, View, StyleSheet, Image, StatusBar } from "react-native";
 
 const ImageScreen = ({ route }) => {
   // console.log("routesparams>>>>>>>>>", route.params);
@@ -15,13 +9,11 @@ const ImageScreen = ({ route }) => {
   return (
     <View style={styles.container}>
       {/* <Text>yoyoyoyoyo</Text> */}
-      <ImageBackground
+      <Image
         source={{ uri: ImageURL }}
         resizeMode="contain"
         style={styles.ImageBackground}
-      >
-        <StatusBar style="auto" />
-      </ImageBackground>
+      />
     </View>
   );
 };

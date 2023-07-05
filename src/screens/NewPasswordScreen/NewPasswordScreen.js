@@ -33,6 +33,7 @@ const NewPasswordScreen = () => {
           placeholder="Enter your new password"
           value={setNewPassword}
           setvalue={setNewPassword}
+          secureTextEntry={true}
         />
 
         <CustumButton

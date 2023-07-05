@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Text, View, StyleSheet, ScrollView, Alert } from "react-native";
 import CustumInput from "../../components/CustumInput/CustumInput";
 import CustumButton from "../../components/CustumButton/CustumButton";
 import SocialSignInButtons from "../../components/SocialSignInButtons";
@@ -14,9 +14,16 @@ const SignUpScreen = () => {
   const navigation = useNavigation();
 
   const onRegisterPressed = () => {
+    // username === "" && email === "" && password === "" && passwordRepeat === "";
+    // {
+    //   Alert.alert(`Thank You ${username}`);
+    // }
     // console.warn("onRegisterPressed");
     navigation.navigate("ConfirmEmail");
   };
+
+  // const [agree, SetAgree] = useState("false");
+  // console.log(username, email, password, passwordRepeat);
 
   const onSignInPresses = () => {
     // console.warn("onSignInPressed");

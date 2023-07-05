@@ -11,6 +11,8 @@ import Navigation from "../../components/navigation";
 import Videos from "../../components/Videos/Videos";
 import { useNavigation } from "@react-navigation/native";
 // import CreateThumbnail from "react-native-create-thumbnail";
+import Entypo from "@expo/vector-icons/Entypo";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 const Index = () => {
   const navigation = useNavigation();
@@ -24,6 +26,7 @@ const Index = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={{ fontSize: 24, alignSelf: "center", marginTop: "12%" }}>
+        <Entypo name="home" size={40} marginLeft={30} />
         Home,Sweet home
       </Text>
       <ScrollView style={styles.scrollView}>
@@ -32,10 +35,11 @@ const Index = () => {
             <Text
               style={{
                 fontSize: 24,
-                padding: 40,
+                padding: 50,
               }}
               onPress={WatchVideos}
             >
+              <Entypo name="folder-video" size={40} marginLeft={30} />
               watch Videos
             </Text>
           </TouchableOpacity>
@@ -43,8 +47,16 @@ const Index = () => {
 
         <View>
           <TouchableOpacity style={styles.button2}>
-            <Text style={{ fontSize: 24, padding: 40 }} onPress={ExploreImages}>
+            <Text style={{ fontSize: 24, padding: 50 }} onPress={ExploreImages}>
+              <Entypo name="images" size={40} marginLeft={30} />
               Explore Images
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button1}>
+            <Text style={{ fontSize: 24, padding: 50 }} onPress={ExploreImages}>
+              <Entypo name="music" size={40} marginLeft={30} />
+              Music
             </Text>
           </TouchableOpacity>
         </View>
@@ -68,14 +80,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#40d5ff",
     marginVertical: "10%",
+    marginLeft: "5%",
+    width: "90%",
   },
 
   button2: {
     marginVertical: "20%",
     alignItems: "center",
     backgroundColor: "#ff4040",
-
-    padding: 10,
+    width: "90%",
+    marginLeft: "5%",
   },
 });
 
