@@ -14,10 +14,10 @@ const ImageScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
-      <Text>yoyoyoyoyo</Text>
+      {/* <Text>yoyoyoyoyo</Text> */}
       <ImageBackground
         source={{ uri: ImageURL }}
-        resizeMode="cover"
+        resizeMode="contain"
         style={styles.ImageBackground}
       >
         <StatusBar style="auto" />
@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
   },
   ImageBackground: {
     flex: 1,
-    resizeMode: "cover",
-    width: "50%",
+
+    width: "100%",
+    height: "100%",
     alignItems: "center",
   },
 });
