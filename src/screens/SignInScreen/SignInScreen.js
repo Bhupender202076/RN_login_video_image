@@ -21,24 +21,24 @@ const SignInScreen = () => {
   const [agree, SetAgree] = useState("false");
   console.log(username, password);
 
-  // const onSignInPressed = () => {
-  //   if (username === "Mohit" && password === "12345") {
-  //     Alert.alert(`Thank You ${username}`);
-  //     navigation.navigate("HomeScreen");
-  //   } else {
-  //     Alert.alert(`username and Password is not correct`);
-  //   }
-  // };
+  const onSignInPressed = () => {
+    if (username === "Mohit" && password === "12345") {
+      Alert.alert(`Thank You ${username}`);
+      navigation.navigate("HomeScreen");
+    } else {
+      Alert.alert(`username and Password is not correct`);
+    }
+  };
 
   const { height } = useWindowDimensions();
   const navigation = useNavigation();
 
-  const onSignInPressed = () => {
-    console.warn("Sign in");
-    //validate user
+  // const onSignInPressed = () => {
+  //   console.warn("Sign in");
+  //   //validate user
 
-    navigation.navigate("HomeScreen");
-  };
+  //   navigation.navigate("HomeScreen");
+  // };
 
   const onForgotPasswordPressed = () => {
     // console.warn("onForgotPasswordPressed");

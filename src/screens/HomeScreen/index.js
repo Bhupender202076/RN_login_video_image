@@ -25,7 +25,14 @@ const Index = () => {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{ fontSize: 24, alignSelf: "center", marginTop: "12%" }}>
+      <Text
+        style={{
+          fontSize: 24,
+          alignSelf: "center",
+          marginTop: "12%",
+          backgroundColor: "#EAEFF2",
+        }}
+      >
         <Entypo name="home" size={40} marginLeft={30} />
         Home,Sweet home
       </Text>
@@ -74,6 +81,8 @@ const styles = StyleSheet.create({
     height: "90%",
     alignItems: "center",
     padding: 20,
+    // bgColor: "#EAEFF2",
+    // fgcolor: "gray",
   },
 
   button1: {
